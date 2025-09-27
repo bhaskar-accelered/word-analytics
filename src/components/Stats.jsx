@@ -1,6 +1,4 @@
-
 export default function Stats({ counts }) {
-
   return (
     <section className="stats">
       <Stat number={counts.words} label="Words" />

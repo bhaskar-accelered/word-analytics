@@ -13,12 +13,12 @@ export default function Container() {
     if (words[0] === "") return 0;
     return words.length;
   };
-  const counts={
-    length:text.length,
-    words:countWords(),
-    instagram:INSTAGRAM_MAX_CHARACTERS - text.length,
-    facebook:FACEBOOK_MAX_CHARACTERS - text.length
-  }
+  const counts = {
+    length: text.length,
+    words: countWords(),
+    instagram: INSTAGRAM_MAX_CHARACTERS - text.length,
+    facebook: FACEBOOK_MAX_CHARACTERS - text.length,
+  };
   return (
     <main className="container">
       <Textarea text={text} setText={setText} />
