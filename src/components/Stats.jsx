@@ -1,20 +1,12 @@
-import {
-  FACEBOOK_MAX_CHARACTERS,
-  INSTAGRAM_MAX_CHARACTERS,
-} from "../lib/constants";
 
-export default function Stats({ text }) {
-  const countWords = () => {
-    let words = text.trim().split(/\s+/);
-    if (words[0] === "") return 0;
-    return words.length;
-  };
+export default function Stats({ counts }) {
+
   return (
     <section className="stats">
-      <Stat number={countWords()} label="Words" />
-      <Stat number={text.length} label="Characters" />
-      <Stat number={INSTAGRAM_MAX_CHARACTERS - text.length} label="Instagram" />
-      <Stat number={FACEBOOK_MAX_CHARACTERS - text.length} label="Facebook" />
+      <Stat number={counts.words} label="Words" />
+      <Stat number={counts.length} label="Characters" />
+      <Stat number={counts.instagram} label="Instagram" />
+      <Stat number={counts.facebook} label="Facebook" />
     </section>
   );
 }
